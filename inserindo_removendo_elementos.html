@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .test {
+        background: red;
+      }
+    </style>
+    <title>jQuery</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(() => {
+        // Remove um element => $('.item2').remove()
+
+        // Substitui conteúdo dentro da tag InnerHtml
+        $("#lista1").html(
+          "<p>estou substituindo todo o conteúdo dentro da tag</p>"
+        );
+
+        // Adiciona um elemento após outro (dentro de tags que abrem e fecham - innerHTML)
+        $("#lista1").append("<li> blablabla </li>");
+
+        // Adiciona um elemento antes da referência (dentro de tags que abrem e fecham - innerHTML)
+        $("#lista2").prepend("<div class='test'> blebleble </div>");
+
+        // Adiciona um elemento após a referência (fora da TAG)
+        $("#lista2").after("<hr/> <div>após a tag </div>");
+
+        // Adiciona um elemento antes a referência (fora da TAG)
+        $("#lista2").before(" <div>antes a tag </div> <hr/>");
+      });
+    </script>
+  </head>
+
+  <body>
+    <ul id="lista1">
+      <li>Item 1</li>
+      <li class="item2">Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <div id="lista2">
+      <div>Item 1</div>
+      <div class="item2">Item 2</div>
+      <div>Item 3</div>
+    </div>
+
+    <hr id="linha" />
+  </body>
+</html>
