@@ -30,100 +30,102 @@
     ></script>
     <script>
       $(document).ready(() => {
-        $('#onload').html('Página carregada')
+        $("#onload").html("Página carregada");
 
         $(window).scroll(() => {
-          $('#scroll').html('Scroll acionado')
-        })
+          $("#scroll").html("Scroll acionado");
+        });
 
         $(window).resize(() => {
-          $('#xyz').html('Página redimensionada').css('background-color', 'red')
-        })
+          $("#xyz")
+            .html("Página redimensionada")
+            .css("background-color", "red");
+        });
 
         //function / arrow function
-        $('#div1').scroll(e => {
-          $(e.target).css('background-color', 'blue')
-        })
+        $("#div1").scroll((e) => {
+          $(e.target).css("background-color", "blue");
+        });
 
-        $('#btn1').mousedown(() => {
-          $('#div2').css('background-color', 'green')
-        })
+        $("#btn1").mousedown(() => {
+          $("#div2").css("background-color", "green");
+        });
 
-        $('#btn1').click(() => {
-          $('#div2').css('background-color', 'blue')
-        })
+        $("#btn1").click(() => {
+          $("#div2").css("background-color", "blue");
+        });
 
-        $('#btn2').dblclick(() => {
-          $('#div2').css('background-color', 'yellow')
-        })
+        $("#btn2").dblclick(() => {
+          $("#div2").css("background-color", "yellow");
+        });
 
-        $('#div2').mousemove(e => {
-          $('#resultadoDiv').html('X: ' + e.offsetX + ' / Y: ' + e.offsetY)
-        })
+        $("#div2").mousemove((e) => {
+          $("#resultadoDiv").html("X: " + e.offsetX + " / Y: " + e.offsetY);
+        });
 
-        $('#divExterna').mouseleave(() => {
-          $('#resultadoDiv1').html('saiu')
-          console.log('Div Externa (saiu)')
-        })
+        $("#divExterna").mouseleave(() => {
+          $("#resultadoDiv1").html("saiu");
+          console.log("Div Externa (saiu)");
+        });
 
-        $('#divInterna').mouseenter(() => {
-          $('#resultadoDiv2').html('entrou')
-          console.log('Div Interna (entrou)')
-        })
+        $("#divInterna").mouseenter(() => {
+          $("#resultadoDiv2").html("entrou");
+          console.log("Div Interna (entrou)");
+        });
 
-        $('#divInterna').mouseleave(() => {
-          $('#resultadoDiv2').html('saiu')
-          console.log('Div Interna (saiu)')
-        })
+        $("#divInterna").mouseleave(() => {
+          $("#resultadoDiv2").html("saiu");
+          console.log("Div Interna (saiu)");
+        });
 
-        $('#up').keyup(e => {
+        $("#up").keyup((e) => {
           if (e.keyCode < 49 || e.keyCode > 52) {
-            let txt = $(e.target).val()
-            txt = txt.slice(0, -1)
-            $(e.target).val(txt)
+            let txt = $(e.target).val();
+            txt = txt.slice(0, -1);
+            $(e.target).val(txt);
           }
-        })
+        });
 
-        $('#down').keydown(e => {
-          $('#resultadoTecla2').html('Tecla apertada')
-        })
+        $("#down").keydown((e) => {
+          $("#resultadoTecla2").html("Tecla apertada");
+        });
 
-        $('#nome,#email').focus(e => {
-          console.log('Esse elemento HTML recebeu o foco ')
-          $(e.target).addClass('inputFocado')
-        })
+        $("#nome,#email").focus((e) => {
+          console.log("Esse elemento HTML recebeu o foco ");
+          $(e.target).addClass("inputFocado");
+        });
 
-        $('#nome,#email').blur(e => {
-          console.log('Esse elemento HTML perdeu o foco (nome)')
-          $(e.target).removeClass('inputFocado')
-        })
+        $("#nome,#email").blur((e) => {
+          console.log("Esse elemento HTML perdeu o foco (nome)");
+          $(e.target).removeClass("inputFocado");
+        });
 
-        $('#opcao').change(e => {
-          console.log($(e.target).val())
-        })
+        $("#opcao").change((e) => {
+          console.log($(e.target).val());
+        });
 
-        $('form').submit(e => {
-          e.preventDefault()
-          const name = $('#nome').val()
-          const email = $('#email').val()
-          const select = $('#opcao').val()
+        $("form").submit((e) => {
+          e.preventDefault();
+          const name = $("#nome").val();
+          const email = $("#email").val();
+          const select = $("#opcao").val();
 
           const userInfo = {
             name,
             email,
-            select
-          }
+            select,
+          };
 
-          console.log(userInfo)
-          $('#nome').val('')
-          $('#email').val('')
-          $('#opcao').val('')
-        })
+          console.log(userInfo);
+          $("#nome").val("");
+          $("#email").val("");
+          $("#opcao").val("");
+        });
 
-        $('a').click(e => {
-          e.preventDefault()
-        })
-      })
+        $("a").click((e) => {
+          e.preventDefault();
+        });
+      });
     </script>
   </head>
 
